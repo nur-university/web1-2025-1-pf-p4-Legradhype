@@ -1,5 +1,4 @@
-
-  .layout-chat {
+ .layout-chat {
     display: flex;
     min-height: 100vh;
     font-family: 'Segoe UI', sans-serif;
@@ -224,12 +223,12 @@
     background-color: #005fa3;
   }
 
-  /* Utilidad */
+
   .oculto {
     display: none;
   }
 
-  /* Tablets (≤768px) */
+ 
 @media (max-width: 768px) {
   .layout-chat {
     flex-direction: column;
@@ -326,12 +325,6 @@
   .mensaje-info p {
     font-size: 0.9rem;
   }
-
-  .volver-btn {
-    width: 100%;
-    font-size: 1rem;
-  }
-}
 
   .volver-btn {
     width: 100%;
