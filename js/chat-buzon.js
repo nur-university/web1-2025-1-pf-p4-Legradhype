@@ -18,12 +18,12 @@ const chatsPorProducto = {
       {
         nombre: 'Usuario1',
         mensaje: '¿Puedes entregar hoy?',
-        img: 'img/usuario .png'
+        img: 'img/usuario.png'
       },
       {
         nombre: 'Usuario2',
         mensaje: '¿Aceptás trueque?',
-        img: 'img/usuario .png'
+        img: 'img/usuario.png'
       }
     ]
   },
@@ -32,8 +32,8 @@ const chatsPorProducto = {
     usuarios: [
       {
         nombre: 'Usuario3',
-        mensaje: '¿Tienes talla 42?',
-        img: 'img/usuario .png'
+        mensaje: '¿Tienes talle 42?',
+        img: 'img/usuario.png'
       }
     ]
   }
@@ -96,8 +96,9 @@ volverBtn.addEventListener('click', () => {
   vistaProductos.classList.remove('oculto');
   busquedaVendiendo.placeholder = "Buscar publicación...";
   busquedaVendiendo.value = '';
-  filtrarVendiendo(); 
+  filtrarVendiendo();
 });
+
 
 document.querySelectorAll('.tarjeta-producto').forEach(tarjeta => {
   tarjeta.addEventListener('click', () => {
@@ -105,6 +106,9 @@ document.querySelectorAll('.tarjeta-producto').forEach(tarjeta => {
     mostrarUsuariosDelProducto(productoId);
   });
 });
+
+
+
 
 busquedaComprando.addEventListener('input', () => {
   const filtro = busquedaComprando.value.toLowerCase();
@@ -121,15 +125,17 @@ function filtrarVendiendo() {
   const filtro = busquedaVendiendo.value.toLowerCase();
 
   if (!vistaProductos.classList.contains('oculto')) {
+
     document.querySelectorAll('.tarjeta-producto').forEach(tarjeta => {
       const titulo = tarjeta.querySelector('h4').textContent.toLowerCase();
       tarjeta.style.display = titulo.includes(filtro) ? 'block' : 'none';
     });
   } else {
-
+    
     document.querySelectorAll('.usuario-chat').forEach(usuario => {
       const nombre = usuario.dataset.nombre;
       usuario.style.display = nombre.includes(filtro) ? 'flex' : 'none';
     });
   }
 }
+
