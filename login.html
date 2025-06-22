@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Iniciar Sesión</title>
+  <script defer src="js/auth.js"></script>
+</head>
+<body>
+  <div class="formulario">
+    <h2>Iniciar Sesión</h2>
+    <label for="emailLogin">Correo electrónico:</label>
+    <input type="email" id="emailLogin">
+    
+    <label for="passwordLogin">Contraseña:</label>
+    <input type="password" id="passwordLogin">
+    
+    <button onclick="iniciarSesion()">Iniciar</button>
+    
+    <p>¿Todavía no tienes una cuenta? <a href="register.html">Registrarse</a></p>
+    
+    <p id="mensajeLogin" style="color: red;"></p>
+  </div>
+</body>
+</html>
